@@ -1,0 +1,20 @@
+{
+  "name": "youdao-translate-api",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "node-fetch": "^3.3.1",
+    "qs": "^6.11.2"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "@types/qs": "^6.9.7",
+    "typescript": "^5.0.4"
+  }
+}
