@@ -1,6 +1,8 @@
 # youdao-translate-api
 
-基于 [有道智云·AI 开放平台](https://ai.youdao.com/) 的文本翻译。需注册申请 API,注册免费赠送￥ 50 体验金额。
+基于有道智云的文本翻译。
+
+需注册申请 API，地址：https://ai.youdao.com/
 
 # 安装
 
