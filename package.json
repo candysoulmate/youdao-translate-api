@@ -1,11 +1,13 @@
 {
   "name": "youdao-translate-api",
   "description": "基于有道智云的文本翻译工具",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "lib/index.js",
   "license": "MIT",
   "type": "module",
-  "keywords": ["translate"],
+  "keywords": [
+    "translate"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/candysoulmate/youdao-translate-api"
