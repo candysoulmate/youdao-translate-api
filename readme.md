@@ -40,6 +40,19 @@ translate.run({
 });
 ```
 
+批量翻译
+
+```js
+const translate = new Translate({
+  appId: "应用ID",
+  appSecret: "应用秘钥",
+});
+
+translate.runBatch({
+  query: ["香蕉", "苹果", "车厘子"],
+});
+```
+
 # 文档
 
 响应码、支持语言等更多信息请参考文档：
