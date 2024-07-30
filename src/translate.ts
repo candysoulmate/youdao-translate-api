@@ -19,7 +19,7 @@ export class Translate {
   /**
    * 获取翻译结果
    */
-  run(queryForm: QueryForm): Promise<YoudaoResponse> {
+  async run(queryForm: QueryForm): Promise<YoudaoResponse> {
     const { query, from = "auto", to = "auto", vocabId } = queryForm;
     const { appId, appSecret } = this.config;
 
@@ -37,13 +37,13 @@ export class Translate {
       appKey: appId,
     });
 
-    return fetch(`http://openapi.youdao.com/api?${qsStr}`).then(async (res) => {
-      const json = await res.json();
-      return json as YoudaoResponse;
-    });
+    const res = await fetch(`http://openapi.youdao.com/api?${qsStr}`);
+    const json = await res.json();
+    return await (json as YoudaoResponse);
   }
 
-  runBatch(queryForm: BatchQueryForm) {
+  /** 批量获取翻译结果 */
+  async runBatch(queryForm: BatchQueryForm) {
     const { query, from = "auto", to = "auto", vocabId } = queryForm;
     const { appId, appSecret } = this.config;
 
@@ -64,11 +64,8 @@ export class Translate {
       { indices: false }
     );
 
-    return fetch(`https://openapi.youdao.com/v2/api?${qsStr}`).then(
-      async (res) => {
-        const json = await res.json();
-        return json as YoudaoBatchResponse;
-      }
-    );
+    const res = await fetch(`https://openapi.youdao.com/v2/api?${qsStr}`);
+    const json = await res.json();
+    return await (json as YoudaoBatchResponse);
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "youdao-translate-api",
   "description": "基于有道智云的文本翻译工具",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "lib/index.js",
   "license": "MIT",
   "type": "module",
